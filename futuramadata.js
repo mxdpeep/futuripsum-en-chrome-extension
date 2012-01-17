@@ -1,19 +1,3 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Futuripsum</title>
-<script type="text/javascript">
-
-
-/**
- * Futuripsum Google Chrome extension
- * coded using RapidPHP 2011 by Blumentals Software
- * (c) 2011 Filip Oščádal <filip@mxd.cz>
- * published under GNU GPL v2 license
- */
-
-
 // Futurama quotes
 var futuramadata = [
 "Hello? Pizza delivery for I. C. Wiener. Oh, crud! Here's to another lousy millennium. Welcome to the world of tomorrow!",
@@ -1964,43 +1948,3 @@ var futuramadata = [
 "Extinct Tasmanian tigers. And dodo birds. And white rhinos. And striped biologist-taunters. What are you gonna do, shoot us? These once extinct plants and animals are my gift to the universe. Through untold generations, my race has treasured their DNA. Treat them wisely with the knowledge that all species are precious. This is unbelievable. What's going on? To answer that, I must tell you a story. A story of two alien species so ancient that. Hutch, are you okay? My sister's femi-necklace.",
 "Hey, how come I can't read your thoughts anymore? I shall avenge you, Hutch Waterfall. After all these eons, the Dark Ones are no more. Will you preserve their DNA, O Great Encyclopod? Wait, where did it go? Well, at any rate, I shall preserve the DNA of Homo sapiens. I thought you only saved the DNA of endangered species. Farewell. I guess he didn't hear me. Well, looks like that wraps everything up in a nice big, old, fat sack of. I hereby arrest you fugitives on 53 counts of fugivity."
 ];
-
-var regex = new RegExp("[\\?&]counter=([^&#]*)");
-var results = regex.exec(window.location.href);
-if (results == null)
-{
-  var counter = 3;
-}
-else
-{
-  var counter = results[1];
-}
-
-var text = [];
-var l = futuramadata.length;
-text.push('<h1 style="text-align:center">Futuripsum</h1><p style="text-align:center"><img alt="Futuripsum" src="futuripsum.128.png" border=0></p>');
-
-text.push('<h2>HTML</h2>');
-for (var i = 0; i < counter; i++)
-{
-  text.push('<p>&lt;p&gt;');
-  text.push(futuramadata[parseInt(Math.random() * l)]);
-  text.push('&lt;/p&gt;</p>');
-}
-
-text.push('<h2>Text</h2>');
-for (var i = 0; i < counter; i++)
-{
-  text.push('<p>');
-  text.push(futuramadata[parseInt(Math.random() * l)]);
-  text.push('</p>');
-}
-
-</script>
-</head>
-<body id='body'></body>
-<script type="text/javascript">
-document.body.style.fontFamily = 'Arial';
-document.getElementById('body').innerHTML = text.join('');
-</script>
-</html>
