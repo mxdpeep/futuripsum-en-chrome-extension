@@ -11,6 +11,7 @@ Click the button several times to get multiple paragraphs.
 Notable files:
 
 clipboard.js = reusable clipboard copy helper
+
 notification.js = reusable notification helper
 
 
